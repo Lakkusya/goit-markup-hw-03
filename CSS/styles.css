@@ -1,17 +1,30 @@
-/* html {
+html {
   box-sizing: border-box;
-} 
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-} */
-ul {
+}
+
+li {
+  margin: 0;
   padding: 0;
 }
-h1 {
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -41,6 +54,10 @@ h1 {
 }
 
 /* НАВИГАЦИЯ ЛОГО/КОНТАКТЫ */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
 .nav-menu {
   display: flex;
   align-items: center;
@@ -51,15 +68,12 @@ h1 {
 .utils-menu .utils {
   display: flex;
 }
-.heder {
-  display: flex;
-  justify-content: space-between;
-}
 .logo {
   margin-right: 85px;
 }
-.nav-list .link,
-.utils .link {
+.nav-list .item .link,
+.utils .item .link {
+  display: inline-block;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -93,6 +107,7 @@ h1 {
   text-align: center;
 }
 .hero-title {
+  text-transform: uppercase;
   padding-top: 200px;
   font-family: Roboto;
   font-style: normal;
@@ -119,6 +134,7 @@ h1 {
 .headline,
 .text,
 .description .link {
+  text-transform: uppercase;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -127,13 +143,15 @@ h1 {
   color: var(--primary-title-color);
 }
 .text {
+  text-transform: none;
   font-weight: 400;
   line-height: 1.71;
   color: var(--primary-text-color);
-  margin-bottom: 92px;
 }
 .aboutus {
   display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .aboutus .list .image {
   display: flex;
@@ -148,9 +166,8 @@ h1 {
   margin-bottom: 10px;
 }
 .aboutus .list {
-  width: calc ((100% - 90px) / 4);
+  width: calc((100% - 90px) / 4);
   margin-right: 30px;
-  padding-top: 92px;
 }
 /* Чем мы занимаемся */
 .subtitle {
@@ -161,20 +178,23 @@ h1 {
   line-height: 1.17;
   color: var(--primary-title-color);
   text-align: center;
-  margin-bottom: 50px;
+  padding-top: 92px;
+  padding-bottom: 50px;
 }
 
 .description {
   display: flex;
 }
 .description .link {
-  width: calc ((100% - 60px) / 3);
+  width: calc((100% - 60px) / 3);
   margin-right: 30px;
+  margin-bottom: 94px;
 }
 .description .link:nth-child(3n) {
   margin-right: 0;
 }
 .description .link .text {
+  text-transform: uppercase;
   text-align: center;
   font-family: Roboto;
   font-style: normal;
@@ -183,7 +203,7 @@ h1 {
   line-height: 1.14;
   color: var(--primary-white-color);
   background: rgba(47, 48, 58, 0.8);
-  margin-bottom: 94px;
+
   margin-top: 0;
 }
 
@@ -201,20 +221,22 @@ h1 {
 .position {
   font-weight: 400;
   color: var(--primary-text-color);
+  margin-bottom: 16px;
 }
 .member {
   margin-bottom: 10px;
 }
 .team-photo {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .team {
   display: flex;
 }
 .team .list {
   width: calc ((100% - 90px) / 4);
-  margin-bottom: 94px;
-  margin-top: 50px;
+}
+.team-main {
+  padding-bottom: 94px;
 }
 .team .list:not(:last-child) {
   margin-right: 30px;
@@ -250,8 +272,10 @@ h1 {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-white-color);
+  text-decoration: none;
 }
 .join {
+  text-transform: uppercase;
   padding-top: 0px;
   font-family: Roboto;
   font-style: normal;
@@ -267,12 +291,14 @@ h1 {
   background: #2f303a;
 }
 .footer-nav {
-  padding-left: 214px;
+  min-width: 231px;
   padding-top: 60px;
+  padding-bottom: 60px;
   margin-right: 69px;
 }
 
 .footer-join {
+  min-width: 206px;
   padding-top: 72px;
 }
 
