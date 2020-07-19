@@ -1,0 +1,335 @@
+/* html {
+  box-sizing: border-box;
+} 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+} */
+ul {
+  padding: 0;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+}
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+:root {
+  --primary-text-color: #757575;
+  --primary-title-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --footer-background-color: #2f303a;
+  --secondary-white-color: #f5f4fa;
+  --main-black-color: #000000;
+  --footer-links-color: rgba (255, 255, 255, 0.6);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* НАВИГАЦИЯ ЛОГО/КОНТАКТЫ */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+}
+.utils-menu .utils {
+  display: flex;
+}
+.heder {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-right: 85px;
+}
+.nav-list .link,
+.utils .link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-title-color);
+  text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.nav-list .link:hover,
+.nav-list .link:focus,
+.utils .link:hover,
+.utils .link:focus {
+  color: var(--accent-color);
+}
+.utils .link {
+  color: var(--primary-text-color);
+}
+.nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.utils .item:not(:last-child) {
+  margin-right: 30px;
+}
+/* HERO секция */
+
+.hero-box {
+  height: 600px;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+.hero-title {
+  padding-top: 200px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  color: var(--primary-white-color);
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline;
+  padding: 10px 32px;
+  min-width: 200px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+/* О НАС */
+.headline,
+.text,
+.description .link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-title-color);
+}
+.text {
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+  margin-bottom: 92px;
+}
+.aboutus {
+  display: flex;
+}
+.aboutus .list .image {
+  display: flex;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.headline {
+  margin-bottom: 10px;
+}
+.aboutus .list {
+  width: calc ((100% - 90px) / 4);
+  margin-right: 30px;
+  padding-top: 92px;
+}
+/* Чем мы занимаемся */
+.subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--primary-title-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.description {
+  display: flex;
+}
+.description .link {
+  width: calc ((100% - 60px) / 3);
+  margin-right: 30px;
+}
+.description .link:nth-child(3n) {
+  margin-right: 0;
+}
+.description .link .text {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-white-color);
+  background: rgba(47, 48, 58, 0.8);
+  margin-bottom: 94px;
+  margin-top: 0;
+}
+
+/* Наша команда */
+.member,
+.position {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primary-title-color);
+  text-align: center;
+}
+.position {
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+.member {
+  margin-bottom: 10px;
+}
+.team-photo {
+  padding-bottom: 30px;
+}
+.team {
+  display: flex;
+}
+.team .list {
+  width: calc ((100% - 90px) / 4);
+  margin-bottom: 94px;
+  margin-top: 50px;
+}
+.team .list:not(:last-child) {
+  margin-right: 30px;
+}
+.social-logo {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* ПОСТОЯННЫЕ КЛИЕНТЫ */
+.clients {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 94px;
+}
+.clients .list:not(:last-child) {
+  margin-right: 30px;
+}
+.clients .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+/*ФУТЕР*/
+.footer .utils .link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-white-color);
+}
+.join {
+  padding-top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-white-color);
+}
+
+.footer {
+  display: flex;
+  align-content: center;
+  background: #2f303a;
+}
+.footer-nav {
+  padding-left: 214px;
+  padding-top: 60px;
+  margin-right: 69px;
+}
+
+.footer-join {
+  padding-top: 72px;
+}
+
+/* CТРАНИЦА ПОРТФОЛИО */
+
+.projects-title,
+.name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--primary-title-color);
+}
+.name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
+.nav-btn .btn-menu {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  margin-top: 93px;
+  margin-bottom: 50px;
+}
+.btn-menu {
+  display: inline;
+  border-radius: 4px;
+  padding: 6px 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-btn .btn-menu:hover,
+.nav-btn .btn-menu:focus {
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+}
+.nav-btn {
+  display: flex;
+  justify-content: center;
+}
+.nav-btn .list:not(:last-child) {
+  margin-right: 8px;
+}
+.general .projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .list {
+  width: calc ((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.projects .list:nth-child(3n) {
+  margin-right: 0;
+}
